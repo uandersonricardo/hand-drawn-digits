@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reconhecedor de Dígitos Numéricos</title>
+  <style></style>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="src/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <div class="upload-json">
+    <label for="fileInputJson">Enviar .json</label>
+    <input id="fileInputJson" name="fileInputJson" type="file" accept=".json" />
+  </div>
+  <div class="upload-bin d-none">
+    <label for="fileInputBin">Enviar .bin</label>
+    <input id="fileInputBin" name="fileInputBin" type="file" accept=".bin" />
+  </div>
+  <div class="content d-none">
+    <div class="items">
+      <div class="items__item">
+        <canvas id="original" width="100px" height="200px"></canvas>
+        <button id="btn-clear" class="items__item_clear">Apagar</button>
+      </div>
+      <div class="items__item items__item--mnist">
+        <canvas id="mnist" width="28px" height="28px"></canvas>
+      </div>
+    </div>
+    <div class="chart-container">
+      <canvas id="probabilities" width="600" height="400"></canvas>
+    </div>
+  </div>
+  <script type="text/javascript" src="src/draw.js"></script>
+  <script type="text/javascript" src="src/script.js"></script>
+</body>
+</html>

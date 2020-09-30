@@ -1,0 +1,157 @@
+html, body {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-container {
+  margin-left: 2rem;
+  position: relative;
+  height:400px;
+  width:600px;
+}
+
+.d-none {
+  display: none!important;
+}
+
+.upload-json, .upload-bin {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input[type="file"] {
+		display: none;
+}
+
+label {
+	border-radius: 0.25rem;
+	font-weight: 500;
+  font-size: 14px;
+	padding: 1.25rem 2rem;
+	width: 20%;
+	background-color: #1eaedb;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+label:hover {
+	background-color: #3abce4;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.items {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  flex-wrap: wrap;
+}
+
+.items__arrow {
+  position: relative;
+  margin-right: 2em;
+  padding-bottom: 1em;
+}
+
+.items__arrow:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.5em);
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-left: 2em solid rgba(0, 0, 0, 0.54);
+}
+
+.items__arrow:before {
+  display: block;
+  content: "";
+  width: 2em;
+  height: 1em;
+  background: rgba(0, 0, 0, 0.54);
+}
+
+.items__item {
+  margin: 1em;
+}
+
+.items__item__label {
+  color: rgba(0, 0, 0, 0.87);
+  text-align: center;
+  position: absolute;
+  margin-left: auto;
+}
+
+.items__item_clear {
+  border-radius: 0.25rem;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 1.25rem 2rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  background-color: #1eaedb;
+  border: 0;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.items__item_clear:hover {
+  background-color: #3abce4;
+}
+
+.items__item--mnist {
+  display: none;
+}
+
+canvas {
+  border: 1px solid #e1e1e1;
+  border-radius: 0.25rem;
+}
+
+#probabilities {
+  border: 0;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+:focus {
+  outline: 0;
+}
